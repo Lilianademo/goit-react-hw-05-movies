@@ -1,10 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { App } from "./pages/App";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <BrowserRouter basename="/goit-react-hw-05-movies">
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
